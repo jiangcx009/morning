@@ -3,13 +3,15 @@
 
 typedef unsigned int	UNSG32;
 typedef unsigned char	UNSG8;
+typedef char			SING8;
 
-typedef struct tagbmp
+typedef struct _tagBMP
 {
-	UNSG32 width;
-	UNSG32 height;
-		
-};
+	tagBITMAPFILEHEADER bmpfileheader;
+	tagBITMAPINFOHEADER bmpinfoheader;
+	tagRGBQUAD			bmpQuad;
+	SING8               *bmpdata;
+}tagBMP;
 
 
 #endif
