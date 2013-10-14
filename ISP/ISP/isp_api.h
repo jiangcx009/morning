@@ -15,6 +15,6 @@ typedef struct img_proc_api_t
 };
 
 void readbmp(img_proc_api_t *img, char *pathname);
-void savebmp(img_proc_api_t *img, char *pathname);
+void savebmp(img_proc_api_t *img, char *pathname, SING8 *imgdata);
 
 #endif

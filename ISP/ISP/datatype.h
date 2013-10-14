@@ -9,7 +9,7 @@ typedef struct _tagBMPHeader
 {
 	tagBITMAPFILEHEADER bmpfileheader;
 	tagBITMAPINFOHEADER bmpinfoheader;
-	tagRGBQUAD			bmpQuad;
+	tagRGBQUAD			*bmpQuad;
 }tagBMPHeader;
 
 
