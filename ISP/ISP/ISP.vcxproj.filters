@@ -35,10 +35,13 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ISP.cpp">
+    <ClCompile Include="isp_api.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="isp_api.cpp">
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="fifo.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
