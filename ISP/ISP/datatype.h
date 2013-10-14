@@ -5,13 +5,12 @@ typedef unsigned int	UNSG32;
 typedef unsigned char	UNSG8;
 typedef char			SING8;
 
-typedef struct _tagBMP
+typedef struct _tagBMPHeader
 {
 	tagBITMAPFILEHEADER bmpfileheader;
 	tagBITMAPINFOHEADER bmpinfoheader;
 	tagRGBQUAD			bmpQuad;
-	SING8               *bmpdata;
-}tagBMP;
+}tagBMPHeader;
 
 
 #endif

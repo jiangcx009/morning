@@ -5,15 +5,16 @@
 
 typedef struct img_proc_api_t
 {
-	tagBMP          tagbmp;
+	tagBMPHeader    tagbmpheader;
 	UNSG32			width;
 	UNSG32			height;
 	UNSG32			size;
-	FILE	        *fpin;
-	FILE			*fpout;
+	UNSG32			biBitCount;
+	UNSG32			llinebyte;
+	SING8			*bmpdata;
 };
 
 void readbmp(img_proc_api_t *img, char *pathname);
-//void savebmp(UNSG8 *filenm, UNSG8 *output_buff);
+void savebmp(img_proc_api_t *img, char *pathname);
 
 #endif
