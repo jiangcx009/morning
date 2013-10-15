@@ -11,10 +11,17 @@ typedef struct img_proc_api_t
 	UNSG32			size;
 	UNSG32			biBitCount;
 	UNSG32			llinebyte;
-	SING8			*bmpdata;
+	SING8			*imgdata;
+
+	FILE			*fp;
 };
 
-void readbmp(img_proc_api_t *img, char *pathname);
-void savebmp(img_proc_api_t *img, char *pathname, SING8 *imgdata);
+int readbmp(img_proc_api_t *img, char *pathname);
+int savebmp(img_proc_api_t *img, char *pathname);
+int readbmpheader(img_proc_api_t *img);
+int readimgcfg(img_proc_api_t *img);
+int readimgdata(img_proc_api_t *img);
+int writebmpheader(img_proc_api_t *img);
+int writeimgdata(img_proc_api_t *img);
 
 #endif

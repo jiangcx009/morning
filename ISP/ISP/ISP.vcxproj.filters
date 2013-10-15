@@ -41,7 +41,7 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="fifo.cpp">
+    <ClCompile Include="img_io.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
