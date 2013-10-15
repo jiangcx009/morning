@@ -21,7 +21,7 @@ void main()
 	float dirta_Dis = 3.0f;
 	float dirta_col = 0.1f;
 
-	rgbx = cvLoadImage("D:\\½­³¿Ïþ\\projects\\bilateral_learn\\hong1.bmp");
+	rgbx = cvLoadImage("C:\\Users\\Administrator\\Documents\\GitHub\\morning\\data\\face.bmp");
 	
 	if(!rgbx)
 		printf("error open!\n");
