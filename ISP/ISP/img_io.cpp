@@ -81,14 +81,14 @@ int readimgdata(img_proc_api_t *img)
 		}
 	}
 
-	img->imgdata = (SING8 *)malloc(img->size * sizeof(SING8));
+	img->imgdata = (UNSG8 *)malloc(img->size * sizeof(UNSG8));
 	if ( img->imgdata == NULL) {	
 		printf("malloc memory failed!\n");
 		return -1;
 	}
 
-	if ( (ret = fread( (SING8 *)img->imgdata, 1, img->size, img->fp)) == -1) {
-		printf("read bmp data failed!\n");
+	if ( (ret = fread( (UNSG8 *)img->imgdata, 1, img->size, img->fp)) == -1) {   //从左到有，从下到上，BGR格式
+		printf("read bmp data failed!\n");   
 		return -1;
 	}
 
@@ -134,4 +134,19 @@ int writeimgdata(img_proc_api_t *img)
 	fflush(img->fp);
 
 	return 0;
+}
+
+void display()
+{
+	printf("/* ============================================================================\n");
+	printf("*  \n");
+	printf("*  @CopyRight  Morning\n");
+	printf("*  \n");
+	printf("*  @Description:  You can select one of the following options. \
+				Only support bmp op\n");
+	printf("*  1. Open file\n");
+	printf("*  2. Save file\n");
+	printf("*  3. Format change\n");
+	printf("/* ============================================================================\n");
+
 }
