@@ -11,6 +11,7 @@
 #include <tchar.h>
 #include <stdlib.h>
 #include <Windows.h>
+#include <time.h>
 
 #include "isp_api.h"
 

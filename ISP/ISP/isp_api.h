@@ -10,7 +10,7 @@ typedef struct img_proc_api_t
 	UNSG32			height;
 	UNSG32			size;
 	UNSG32			biBitCount;
-	UNSG32			llinebyte;
+	UNSG32			llinebyte;  //4×Ö½Ú¶ÔÆë
 	UNSG8			*imgdata;
 
 	FILE			*fp;
