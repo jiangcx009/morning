@@ -25,5 +25,6 @@ int writebmpheader(img_proc_api_t *img);
 int writeimgdata(img_proc_api_t *img);
 void display();
 void isp_proc(img_proc_api_t *img, SING8 *pathname, SING8 *savepath);
+void table_init(tagRGB2YUV422_Table *rgb2yuv_table);
 
 #endif
