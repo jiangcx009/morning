@@ -40,6 +40,8 @@ int bmp2yuv422(img_proc_api_t *img, UNSG8 *pyuv422)
 	}
 
 	fwrite(pyuv422, yuv_llinetype*img->height, 1, fp);
+
+	free(pyuv422);
 	fclose(fp);
 
 	return 0;
@@ -91,6 +93,9 @@ void isp_proc(img_proc_api_t *img, SING8 *pathname, SING8 *savepath)
 		case '3':
 			bmp2yuv422(img, pyuv422);
 			break;
+		case '4':
+			img_filter(img, MEDIA_FILTER);
+			break;
 		case 'q':
 			printf("Are you sure to quit?(y/n):");
 
@@ -107,7 +112,26 @@ void isp_proc(img_proc_api_t *img, SING8 *pathname, SING8 *savepath)
 	}
 }
 
-void getuserselection(char userchoice)
+int img_filter(img_proc_api_t *img, int Filter_type)
 {
-	
+	switch(Filter_type) {
+	case MEDIA_FILTER:
+		printf("media filter\n");
+		break;
+	case MEAN_FILTER:
+		printf("mean filter\n");
+		break;
+	case BILATERAL_FILTER:
+		printf("bilateral filter\n");
+		break;
+	default:
+		break;
+	}
+
+	return 0;
+}
+
+void media_filter(UNSG8 *pSrcImg, UNSG8 *pResImg, UNSG32 width, UNSG32 height)
+{
+
 }
